@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-storage.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="container" align="center">
+        <h1> My Web Page Gallery
+        </h1> <br />
+        <div id='thumbnailContainerId' class="thumbnails">
+            <img onmouseover="preview.src=img1.src" name="img1" src="img1.jpeg" />
+        </div>
+        <br />
+        <div class="preview" align="center">
+            <img name="preview" id='previewId' src="img1.jpeg" />
+        </div>
+        <img id="image" />
+        <input type="file" id="photo">
+        <button class="button" onclick="upload()">ADD NEW</button>
+    </div>
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyD5VVDPxBPpyySq7vyBWLRlaNzGhsIM3a0",
+            authDomain: "hover-preview.firebaseapp.com",
+            databaseURL: "https://hover-preview.firebaseio.com",
+            projectId: "hover-preview",
+            storageBucket: "hover-preview.appspot.com",
+            messagingSenderId: "1003096274257",
+            appId: "1:1003096274257:web:8d5d93eb63548f9f998f70",
+            measurementId: "G-0WNLB25YMQ"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="app.js"></script>
+
+</body>
+
+</html>

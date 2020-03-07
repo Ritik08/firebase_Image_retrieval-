@@ -1,1 +1,1 @@
-echo "Good luck@Aculix Technologies LLP"
+echo "Good luck @ Aculix Technologies LLP"
